@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""
+This module includes function for solving lockboxes algorithm
+"""
 from collections import deque
 
 def canUnlockAll(boxes):
+    """ The function for solving lockboxes algorithm """
     num_boxes = len(boxes) # 7
     unlocked_boxes = {0}
     keys_to_process = deque(boxes[0])
