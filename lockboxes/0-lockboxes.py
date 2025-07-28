@@ -12,7 +12,7 @@ def canUnlockAll(boxes):
     keys_to_process = deque(boxes[0])
 
     while keys_to_process:
-        key = keys_to_process.popleft() # 1
+        key = keys_to_process.popleft() #  1
         if 0 <= key < num_boxes and key not in unlocked_boxes:
             unlocked_boxes.add(key)
             for new_key in boxes[key]:
