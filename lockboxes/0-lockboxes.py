@@ -4,16 +4,17 @@ This module includes function for solving lockboxes algorithm
 """
 from collections import deque
 
+
 def canUnlockAll(boxes):
     """ The function for solving lockboxes algorithm """
-    num_boxes = len(boxes) # 7
+    num_boxes = len(boxes)
     unlocked_boxes = {0}
     keys_to_process = deque(boxes[0])
 
     while keys_to_process:
-        # print("Keys to process: ", keys_to_process)
+          # print("Keys to process: ", keys_to_process)
         key = keys_to_process.popleft() # 1
-        # print("Key: ", key)
+          # print("Key: ", key)
         if 0 <= key < num_boxes and key not in unlocked_boxes:
             unlocked_boxes.add(key)
             # print("Number of unlocked boxes: ", len(unlocked_boxes))
